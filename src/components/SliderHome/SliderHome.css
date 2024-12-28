@@ -1,0 +1,174 @@
+#slider-home .swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
+  z-index: 2;
+}
+
+#slider-home .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+#slider-home .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+#slider-home .bas {
+  position: relative;
+  width: calc(100%);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 25px 70px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+#slider-home .button-slider {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#slider-home .btn-home {
+  border: 2px white solid;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: white;
+  padding: 15px 15px;
+  transition: 0.4s;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  font-family: "Sora", sans-serif !important;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: nowrap;
+}
+#slider-home .btn-home-white {
+  border: 2px white solid;
+  background-color: white;
+  text-wrap: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Sora", sans-serif !important;
+
+  color: white;
+  padding: 15px 15px;
+  transition: 0.4s;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#slider-home .btn-home:hover {
+  background-color: white;
+  opacity: 0.5;
+  color: black;
+}
+#slider-home .titleSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#slider-home .titleSlide h3 {
+  font-size: 1.7rem;
+  font-family: "Sora", sans-serif !important;
+  letter-spacing: 0.228571rem;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 0%;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 5px;
+}
+#slider-home .titleSlide p {
+  margin-top: 8px;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  font-family: "Sora", sans-serif !important;
+  letter-spacing: 0.02rem;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  text-align: center;
+  margin: 0%;
+  width: 70%;
+  text-align: start;
+}
+@media screen and (max-width: 1240px) {
+}
+@media screen and (max-width: 1070px) {
+  #slider-home .bas {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 40px;
+  }
+  #slider-home .btn-home {
+    margin: 0%;
+  }
+  #slider-home .button-slider {
+    display: none;
+  }
+}
+@media screen and (max-width: 820px) {
+}
+@media screen and (max-width: 770px) {
+}
+@media screen and (max-width: 590px) {
+}
+@media screen and (max-width: 480px) {
+  #slider-home .titleSlide h3 {
+    font-size: 1rem;
+    text-align: start;
+  }
+  #slider-home .titleSlide p {
+    width: 100%;
+    font-size: 0.5rem;
+    letter-spacing: 0.02rem;
+    line-height: 12px;
+  }
+  #slider-home .bas {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 25px;
+    gap: 30px;
+  }
+  #slider-home .button-slider button {
+    padding: 10px 10px;
+    transition: 0.4s;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 414px) {
+}
+@media screen and (max-width: 325px) {
+}
+@media screen and (max-width: 250px) {
+}

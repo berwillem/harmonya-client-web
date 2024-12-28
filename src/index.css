@@ -11,7 +11,7 @@ body {
   --color-white: #fff;
   --color-black: #000;
 }
-.container {
-  margin-left: 7vw;
-  margin-right: 7vw;
+
+a {
+  text-decoration: none;
 }
