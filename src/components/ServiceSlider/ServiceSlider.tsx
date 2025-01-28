@@ -4,7 +4,6 @@ import "swiper/css";
 
 import "./ServiceSlider.css";
 
-
 // import required modules
 
 import { Autoplay } from "swiper/modules";
@@ -17,7 +16,6 @@ export default function ServiceSlider() {
       title: "Coiffure homme",
       description: "Lorem Ipsum is simply dummy text of the printing and ...",
       tags: ["SPA", "Salon de coiffure"],
-
     },
     {
       imageSrc:
@@ -25,7 +23,6 @@ export default function ServiceSlider() {
       title: "Coiffure homme",
       description: "Lorem Ipsum is simply dummy text of the printing and ...",
       tags: ["SPA", "Salon de coiffure"],
-
     },
     {
       imageSrc:
@@ -33,7 +30,6 @@ export default function ServiceSlider() {
       title: "Coiffure homme",
       description: "Lorem Ipsum is simply dummy text of the printing and ...",
       tags: ["SPA", "Salon de coiffure"],
-
     },
     {
       imageSrc:
@@ -41,7 +37,6 @@ export default function ServiceSlider() {
       title: "Coiffure homme",
       description: "Lorem Ipsum is simply dummy text of the printing and ...",
       tags: ["SPA", "Salon de coiffure"],
-
     },
     {
       imageSrc:
@@ -49,7 +44,6 @@ export default function ServiceSlider() {
       title: "Coiffure homme",
       description: "Lorem Ipsum is simply dummy text of the printing and ...",
       tags: ["SPA", "Salon de coiffure"],
-
     },
     {
       imageSrc:
@@ -57,7 +51,6 @@ export default function ServiceSlider() {
       title: "Coiffure homme",
       description: "Lorem Ipsum is simply dummy text of the printing and ...",
       tags: ["SPA", "Salon de coiffure"],
-
     },
     {
       imageSrc:
@@ -65,13 +58,12 @@ export default function ServiceSlider() {
       title: "Massage Therapy",
       description: "Relax and rejuvenate with our expert therapists.",
       tags: ["SPA", "Wellness"],
-
     },
   ];
   return (
     <>
       <Swiper
-        initialSlide={1}
+        initialSlide={0}
         loop={true}
         spaceBetween={20}
         pagination={{
@@ -89,6 +81,11 @@ export default function ServiceSlider() {
             spaceBetween: 20,
           },
           1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+
+          1290: {
             slidesPerView: 4,
             spaceBetween: 20,
           },
@@ -98,16 +95,13 @@ export default function ServiceSlider() {
         {services.map((service, index) => (
           <SwiperSlide key={index}>
             <ServicesCard
-
               imageSrc={service.imageSrc}
               title={service.title}
               description={service.description}
               tags={service.tags}
-
             />
           </SwiperSlide>
         ))}
-
       </Swiper>
     </>
   );

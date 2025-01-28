@@ -27,6 +27,9 @@
 .title-platfrom p {
   font-size: 24px;
 }
+#stats-section {
+  margin: 5vh 0 0 0;
+}
 @media screen and (max-width: 1240px) {
 }
 @media screen and (max-width: 1070px) {

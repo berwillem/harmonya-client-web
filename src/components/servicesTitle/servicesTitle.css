@@ -1,0 +1,55 @@
+.scrollable-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem 0;
+  cursor: grab; /* Indicate drag functionality */
+  user-select: none; /* Prevent text selection during drag */
+  display: flex;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
+}
+
+.scrollable-container:active {
+  cursor: grabbing; /* Change cursor when actively dragging */
+}
+
+.scrollable-list {
+  display: flex;
+  gap: 1.7rem; /* Space between cards */
+  padding: 0 5vw;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 160px; /* Fixed card width */
+  height: 200px;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 22px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.service-icon {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-label {
+  text-align: center;
+  font-size: 1.2rem;
+  text-wrap: wrap;
+  font-weight: 700;
+}
