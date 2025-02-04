@@ -1,12 +1,8 @@
 .table-container {
   width: 100%;
-  overflow-x: hidden;
-  cursor: grab;
+  overflow-x: scroll;
   user-select: none;
-}
-
-.table-container:active {
-  cursor: grabbing;
+  scrollbar-width: none;
 }
 
 .table {
@@ -19,7 +15,7 @@
 .table td {
   padding: 12px;
   text-overflow: ellipsis;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .table th {
@@ -36,5 +32,4 @@ thead th:last-child {
     overflow-x: auto;
     scrollbar-width: none;
   }
-
 }

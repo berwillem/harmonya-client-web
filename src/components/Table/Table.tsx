@@ -1,7 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./Table.css";
 
-export default function Table({ headers, data }) {
+interface TableProps {
+  headers: string[];
+  data: (string | number)[][];
+}
+export default function Table({ headers, data }: TableProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);

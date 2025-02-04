@@ -2,7 +2,6 @@
   overflow-x: auto;
   white-space: nowrap;
   padding: 1rem 0;
-  cursor: grab; /* Indicate drag functionality */
   user-select: none; /* Prevent text selection during drag */
   display: flex;
   scrollbar-width: none; /* Hide scrollbar in Firefox */
@@ -12,9 +11,6 @@
   display: none; /* Hide scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
 }
 
-.scrollable-container:active {
-  cursor: grabbing; /* Change cursor when actively dragging */
-}
 
 .scrollable-list {
   display: flex;

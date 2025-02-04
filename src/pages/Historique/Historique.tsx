@@ -14,10 +14,38 @@ export default function Historique() {
   ];
 
   const data = [
-    ["OO1", "Lalout Mehdi", "+218 554 96 93 57", "5", "Willem bœchiche", "5"],
-    ["OO1", "Lalout Mehdi", "+218 554 96 93 57", "5", "Willem bœchiche", "5"],
-    ["OO1", "Lalout Mehdi", "+218 554 96 93 57", "5 ", "Willem bœchiche", "5"],
-    ["OO1", "Lalout Mehdi", "+218 554 96 93 57", "5", "Willem bœchiche", "5"],
+    [
+      "Taissir alem",
+      "Lalout Mehdi",
+      "+218 554 96 93 57",
+      "5",
+      "Willem bœchiche",
+      "5",
+    ],
+    [
+      "Wassim mahmoud",
+      "Lalout Mehdi",
+      "+218 554 96 93 57",
+      "5",
+      "Willem bœchiche",
+      "5",
+    ],
+    [
+      "Taissir alem",
+      "Lalout Mehdi",
+      "+218 554 96 93 57",
+      "5 ",
+      "Willem bœchiche",
+      "5",
+    ],
+    [
+      "Taissir alem",
+      "Lalout Mehdi",
+      "+218 554 96 93 57",
+      "5",
+      "Willem bœchiche",
+      "5",
+    ],
   ];
   return (
     <>
