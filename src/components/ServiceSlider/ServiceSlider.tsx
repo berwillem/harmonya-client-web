@@ -8,7 +8,7 @@ import "./ServiceSlider.css";
 
 import { Autoplay } from "swiper/modules";
 import ServicesCard from "../ServicesCard/ServicesCard";
-export default function ServiceSlider() {
+export default function ServiceSlider({ isServiceDetails }) {
   const services = [
     {
       imageSrc:
@@ -71,25 +71,46 @@ export default function ServiceSlider() {
         }}
         modules={[Autoplay]}
         // slidesPerView={3}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
+        breakpoints={
+          isServiceDetails
+            ? {
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                },
+                968: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
 
-          1290: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        }}
+                1290: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+              }
+            : {
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1290: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }
+        }
         className="mySwiper"
       >
         {services.map((service, index) => (

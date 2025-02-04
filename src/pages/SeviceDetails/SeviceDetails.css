@@ -1,0 +1,164 @@
+.service-titles h2 {
+  font-family: Sora;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30.24px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: auto;
+  color: #7e7e7e;
+}
+
+#service-details {
+  padding: 50px;
+  position: relative;
+  align-items: flex-start;
+  overflow: visible;
+  min-height: 100vh;
+}
+.service-details-right {
+  position: sticky;
+  right: 0;
+  width: 40%;
+  top: 25px;
+}
+.service-details-left {
+  width: 64%;
+  left: 0;
+}
+
+.service-details {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 35px 0 0 0;
+  gap: 15px;
+}
+
+.img-service-banner {
+  width: 100%;
+  height: 60%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.service-details-imgs {
+  display: flex;
+  gap: 1.3%;
+  margin-top: 20px;
+}
+.service-details-imgs img {
+  width: 24%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info-hours-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+  position: sticky;
+  top: 84px;
+}
+
+.info-box,
+.hours-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 19px;
+  border: 1.5px solid #e4e4e4;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+.loccc {
+  width: 62%;
+  overflow-x: hidden;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hours-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hours-box li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.closed {
+  color: gray;
+}
+
+.service-details h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+@media screen and (max-width: 859px) {
+  .service-details {
+    flex-direction: column;
+  }
+  .service-details-left {
+    width: 100%;
+  }
+  .service-details-right {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .info-hours-container {
+    max-width: unset;
+  }
+  #service-details {
+    padding: 5vw;
+  }
+  .service-details-imgs {
+    margin: 0;
+  }
+  .service-details-imgs img {
+    height: unset;
+    border-radius: 2px;
+  }
+  .img-service-banner {
+    border-radius: 7px;
+  }
+  .loccc {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .loccc2 {
+    width: 100%;
+  }
+}

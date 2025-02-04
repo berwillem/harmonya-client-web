@@ -151,11 +151,21 @@
   height: 1em !important;
 }
 .css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
-  top: -6px !important;
+  top: -3px !important;
   color: black !important;
   font-size: 12px !important;
 }
-
+label[data-shrink="false"]
+  + .MuiInputBase-formControl
+  .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+  border: none !important;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+  border: none;
+}
 .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
   color: black !important;
 }

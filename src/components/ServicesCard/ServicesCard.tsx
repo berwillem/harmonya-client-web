@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import "./ServicesCard.css"
+import "./ServicesCard.css";
+import { useNavigate } from "react-router-dom";
 interface ServicesCardProps {
   imageSrc: string;
   title: string;
   description: string;
   tags: string[];
-
 }
 
 export default function ServicesCard({
@@ -16,7 +16,7 @@ export default function ServicesCard({
 }: ServicesCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const formRef = useRef(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -37,10 +37,15 @@ export default function ServicesCard({
   }, [isOpen]);
 
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() =>
+        // navigate to service id page
+        navigate("/service")
+      }
+    >
       <div className="image-container">
         <img src={imageSrc} alt={title} className="card-image" />
-
       </div>
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
@@ -51,7 +56,6 @@ export default function ServicesCard({
               {tag}
             </span>
           ))}
-
         </div>
       </div>
     </div>

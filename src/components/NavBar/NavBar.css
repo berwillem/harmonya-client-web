@@ -103,17 +103,25 @@
   gap: 10px;
   position: relative;
 }
-
+nav {
+  position: fixed;
+  z-index: 5000;
+  width: 100vw;
+  top: 0;
+}
+.nav-overlay {
+  height: 80px;
+}
 .mobile-nav {
-  margin-top: 3vh;
-  padding: 0 5vw;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   border-radius: 12px;
+  box-shadow: 0 2px 6px 0px #0000001a;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 980px) {
   .mobile-nav {
     display: none;
   }
@@ -125,7 +133,7 @@
 .web-nav {
   display: none;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 980px) {
   /* General Styles */
   .web-nav {
     display: block;
@@ -188,6 +196,7 @@
     /* left: 50%; */
     right: 47.5%;
     width: 5%;
+    cursor: pointer;
   }
 
   /* Right Section */

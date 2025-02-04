@@ -24,13 +24,13 @@ export default function Home() {
           <div className="title-home">
             <h2>Check nearby stores :</h2>
           </div>
-          <ServiceSlider />
+          <ServiceSlider isServiceDetails={false} />
         </section>
         <section id="service-section">
           <div className="title-home">
             <h2>Take a look at the services web propose :</h2>
           </div>
-          <ServiceSlider />
+          <ServiceSlider isServiceDetails={false} />
         </section>
         <section id="annonce-section">
           <AnnonceComponents />
