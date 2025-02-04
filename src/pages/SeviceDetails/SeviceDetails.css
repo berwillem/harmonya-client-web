@@ -94,7 +94,7 @@ p {
   overflow-x: hidden;
 }
 
-button {
+.info-box button {
   background: black;
   color: white;
   padding: 10px;

@@ -38,13 +38,7 @@ export default function Home() {
         <section id="about-section">
           <About />
         </section>
-        {/* <section id="platfrom-section">
-          <div className="title-platfrom">
-            <h2>THE PERFECT BOOKING PLATFORMS</h2>
-            <p>Tested and approved</p>
-          </div>
-          <Platform />
-        </section> */}
+
         <section id="stats-section">
           <InfoBoard />
         </section>

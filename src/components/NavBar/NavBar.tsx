@@ -87,7 +87,7 @@ export default function NavBar() {
                     onChange={(e) => setSearchRequest(e.target.value)}
                     onKeyPress={(e) => {
                       if (e.key === "Enter") {
-                        console.log(searchRequest);
+                        navigate(`/search?q=${searchRequest}`);
                       }
                     }}
                   />

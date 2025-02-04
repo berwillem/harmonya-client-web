@@ -4,6 +4,7 @@ import Home from "@/pages/Home/Home";
 import SeviceDetails from "@/pages/SeviceDetails/SeviceDetails";
 import Compte from "@/pages/Compte/Compte";
 import Search from "@/pages/Search/Search";
+import Historique from "@/pages/Historique/Historique";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
   {
     path: "/settings",
     element: <Compte />,
+  },
+
+  {
+    path: "/historique",
+    element: <Historique />,
   },
 ]);
 
