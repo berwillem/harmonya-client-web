@@ -21,6 +21,7 @@
     padding: 35px 0 15px 35px;
   }
   .table-container-historique {
-    padding: 5px;
+    padding: 5px 0 5px 5px;
+    border-radius: 15px 0 0 15px;
   }
 }
