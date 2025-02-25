@@ -8,7 +8,8 @@ import cb from "../../assets/cb.png";
 import dhbya from "../../assets/dhbya.jpg";
 import { useTranslation } from "react-i18next";
 import "./Footer.css";
-
+import { subNewslater } from "@/services/newslaterServices";
+import Swal from "sweetalert2";
 export default function Footer() {
   const { t } = useTranslation();
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -26,10 +27,39 @@ export default function Footer() {
 
   const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.currentTarget.email.value;
-    console.log(email);
-    e.currentTarget.email.value = "";
+  
+    const form = e.target as HTMLFormElement; // Cast explicite pour éviter l'erreur
+    const formData = new FormData(form);
+    const email = formData.get("email") as string;
+  
+    if (!email) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Veuillez entrer un email valide",
+      });
+      return;
+    }
+  
+    subNewslater({ email })
+      .then(() => {
+        Swal.fire({
+          title: "Good job!",
+          text: "Subscription success",
+          icon: "success",
+        });
+        form.reset(); // Utiliser `form.reset()` au lieu de `e.currentTarget.reset()`
+      })
+      .catch((err) => {
+        console.error("Erreur capturée:", err);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: err.response?.data?.message || err.message || "Une erreur inconnue s'est produite",
+        });
+      });
   };
+  
 
   return (
     <div className="footer">
