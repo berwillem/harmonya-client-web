@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Sora", serif;
@@ -10,6 +12,19 @@ body {
 :root {
   --color-white: #fff;
   --color-black: #000;
+  --dark-button-color: #189166;
+  --button-color: #02c17d;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 
 a {

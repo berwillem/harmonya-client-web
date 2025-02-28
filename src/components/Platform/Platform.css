@@ -13,15 +13,15 @@
   gap: 40px;
   width: 55%;
   height: 100%;
-  padding :3vh 5vw;
+  padding: 3vh 5vw;
 }
 .Platform .left-Platform h2 {
-  font-size: 40px;
+  font-size: 2.4rem;
   width: 60%;
   color: white;
 }
 .Platform .left-Platform p {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 400;
   width: 75%;
   color: white;
@@ -82,9 +82,9 @@
   .Platform .left-Platform {
     gap: 15px;
     height: auto;
-    padding :3vh 9vw;
+    padding: 3vh 9vw;
   }
- 
+
   .Platform .left-Platform h2 {
     font-size: 20px;
   }
@@ -96,7 +96,6 @@
   }
   .Platform .right-Platform img {
     height: 270px;
- 
   }
 }
 @media screen and (max-width: 480px) {

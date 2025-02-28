@@ -1,0 +1,365 @@
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.warning-text {
+  color: #ff9800;
+}
+
+.delete-button2 {
+  background-color: #f44336 !important;
+  color: #fff !important;
+  border: 1px solid #b6332a !important;
+  width: 24%;
+  min-width: 240px !important;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.delete-section > .first-card-alert h1 {
+  font-family: Sora;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ff8000;
+}
+
+.abonnements-page {
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+  /* padding: 25px; */
+}
+
+.first-card {
+  background: #ffffff;
+  border-radius: 16px;
+  /* width: 90%; */
+  padding: 40px 30px;
+  border: 1px solid #0000001a;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 15px 30px 0 15px;
+}
+
+.first-card-content {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 3%;
+}
+
+.first-card-titles {
+  min-width: 265px;
+}
+.first-card-titles h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.first-card-titles h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.plan span {
+  color: #ffbe31;
+  font-weight: bold;
+}
+
+.first-card-titles h3 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.first-card-alert {
+  background: #fff8e1;
+  border: 1px solid var(--alert-color);
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 15px;
+  height: fit-content;
+}
+
+.first-card-alert h1 {
+  font-size: 18px;
+  color: var(--alert-color);
+  margin-bottom: 10px;
+}
+
+.first-card-alert p {
+  font-size: 14px;
+  color: var(--alert-color);
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+/* Buttons section */
+.first-card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first-card-button {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.first-card-button button {
+  background: black;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 11px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+}
+
+.first-card-button button:last-child {
+  background: #ff00001a;
+  color: var(--decline-color);
+  border: 1px solid var(--decline-color);
+}
+.first-card-button button:first-child {
+  background: black;
+  color: white;
+  border: 1px solid #0000001a;
+}
+
+.first-card-button button:hover {
+  opacity: 0.9;
+}
+
+.first-card-bar {
+  width: 60%;
+}
+
+.first-card-bar h1 {
+  font-size: 14px;
+}
+
+.css-l16vtb-MuiLinearProgress-bar1 {
+  background-color: #02c17d !important;
+}
+.css-1txyin7-MuiLinearProgress-root {
+  background-color: #02c17d1a !important;
+  border-radius: 8px;
+  height: 6px !important;
+}
+
+@media screen and (max-width: 700px) {
+  .first-card-content {
+    flex-direction: column;
+  }
+  .first-card {
+    gap: 10px;
+    margin: 15px;
+  }
+  .second-card {
+    margin: 15px 0 0 0 !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .first-card-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .first-card-bar {
+    width: 100%;
+  }
+  .first-card-button {
+    width: 100%;
+    flex-direction: column;
+  }
+  /* .first-card-button button:last-child {
+    max-width: 100px;
+  } */
+}
+
+.second-card {
+  background: #ffffff;
+  border-radius: 16px;
+  /* width: 90%; */
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0px 30px 0 15px;
+}
+
+.second-card > * {
+  width: 100% !important;
+}
+
+.rootform {
+  padding: 5px 30px;
+}
+@media screen and (max-width: 750px) {
+  .rootform .form-field {
+    gap: 16px;
+  }
+}
+
+.change-password-form {
+  width: 94%;
+  padding: 40px 30px;
+  margin: 15px 30px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.change-password-form h1,
+.rootform h1 {
+  font-family: Sora;
+  font-size: 24px;
+  font-weight: 600;
+}
+.change-password-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+}
+
+.success {
+  color: green;
+  font-size: 0.85em;
+}
+
+ul {
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: var(--button-color);
+  margin-right: 10px;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.new-password {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-actions button:first-child {
+  background-color: black;
+  border-radius: 8px;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+  max-width: 430px;
+}
+
+.form-actions button:last-child {
+  background-color: #e7e7e7;
+  color: #7e7e7e;
+  border: 1px solid #0000001a;
+  border-radius: 8px;
+  max-width: 110px;
+}
+
+.form-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+.form-field1 {
+  width: 49%;
+}
+
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
+}
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: black !important;
+}
+
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+
+@media screen and (max-width: 768px) {
+  .form-field {
+    flex-direction: column;
+    /* gap: 16px; */
+  }
+  .form-field1 {
+    width: 100%;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions button:last-child {
+    width: 100%;
+  }
+  .change-password-form {
+    margin: 15px;
+    width: unset;
+  }
+}
+
+.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 16.5px 14px !important;
+}
