@@ -3,9 +3,9 @@ import "./Home.css";
 import ServiceSlider from "@/components/ServiceSlider/ServiceSlider";
 import AnnonceComponents from "@/components/AnnonceComponents/AnnonceComponents";
 import About from "@/components/About/About";
-import Platform from "@/components/Platform/Platform";
+import ServicesTitle from "../../components/ServicesTitle/ServicesTitle"
 import InfoBoard from "@/components/InfoBoard/InfoBoard";
-import ServicesTitle from "@/components/ServicesTitle/servicesTitle";
+
 export default function Home() {
   return (
     <>

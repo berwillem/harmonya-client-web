@@ -5,6 +5,7 @@ import SeviceDetails from "@/pages/SeviceDetails/SeviceDetails";
 import Compte from "@/pages/Compte/Compte";
 import Search from "@/pages/Search/Search";
 import Historique from "@/pages/Historique/Historique";
+import ReservationPage from "@/pages/ReservationPage/ReservationPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/settings",
     element: <Compte />,
+  },
+  {
+    path: "/Reservation",
+    element: <ReservationPage />,
   },
 
   {

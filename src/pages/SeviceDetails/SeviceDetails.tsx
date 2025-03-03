@@ -4,6 +4,7 @@ import localisation from "../../assets/localisation.png";
 import img1 from "../../assets/service3.png";
 import img2 from "../../assets/service2.png";
 import img3 from "../../assets/service.png";
+import { Link } from "react-router-dom";
 
 const fakeService = {
   title: "Coiffure Homme",
@@ -64,7 +65,11 @@ export default function SeviceDetails() {
                   <strong>Prix :</strong>
                 </p>
                 <p className="price">{fakeService.price}</p>
-                <button>Réservez votre place</button>
+                <Link to="/Reservation">
+                  <button>Réservez votre place</button>
+                </Link>
+
+
               </div>
 
               <div className="hours-box">
