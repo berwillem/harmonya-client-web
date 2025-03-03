@@ -1,6 +1,8 @@
-import { TextField, Button, Checkbox, FormControlLabel } from "@mui/material";
+import { TextField, Checkbox, FormControlLabel } from "@mui/material";
 import "./SignUpModal.css";
 import { IoMdClose } from "react-icons/io";
+import { registerUser } from "@/services/auth";
+import { useAuthStore } from "@/stores/StoreUser";
 
 interface SignUpModalProps {
   open: boolean;
@@ -13,6 +15,7 @@ export default function SignUpModal({
   handleClose,
   onSwitchToSignIn,
 }: SignUpModalProps) {
+  const { login } = useAuthStore();
   if (!open) return null;
 
   return (
@@ -39,19 +42,47 @@ export default function SignUpModal({
         >
           Bienvenue sur Harmonya
         </h2>
-        <form className="modal-form">
+        <form
+          className="modal-form"
+          onSubmit={(e: any) => {
+            e.preventDefault();
+
+            const email = e.target.email.value;
+            const password = e.target.password.value;
+            const firstName = e.target.firstName.value;
+            const lastName = e.target.lastName.value;
+            const phone = e.target.phone.value;
+
+            registerUser({
+              email,
+              password,
+              firstName,
+              lastName,
+              client: { phone },
+              userType: "client",
+            }).then((res) => {
+              console.log(res.data);
+              handleClose();
+              login(res.data.user, res.data.token);
+            });
+
+            console.log(email, password);
+          }}
+        >
           <div className="half-width-inputs">
             <TextField
               label="Nom"
               variant="outlined"
               fullWidth
               margin="normal"
+              name="lastName"
             />
             <TextField
               label="Prénom"
               variant="outlined"
               fullWidth
               margin="normal"
+              name="firstName"
             />
           </div>
           <TextField
@@ -60,6 +91,7 @@ export default function SignUpModal({
             fullWidth
             type="email"
             margin="normal"
+            name="email"
           />
           <TextField
             label="Numéro de Téléphone"
@@ -67,6 +99,7 @@ export default function SignUpModal({
             fullWidth
             type="tel"
             margin="normal"
+            name="phone"
           />
           <TextField
             label="Mot de passe"
@@ -74,6 +107,7 @@ export default function SignUpModal({
             fullWidth
             type="password"
             margin="normal"
+            name="password"
           />
           <TextField
             label="Confirmer votre mot de passe"
@@ -91,7 +125,11 @@ export default function SignUpModal({
               </>
             }
           />
-          <button  type="submit" style={{ marginTop: "1rem" }} className="btn-black">
+          <button
+            type="submit"
+            style={{ marginTop: "1rem" }}
+            className="btn-black"
+          >
             Créer votre compte
           </button>
         </form>

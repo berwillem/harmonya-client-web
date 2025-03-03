@@ -1,6 +1,8 @@
-import { TextField, Button } from "@mui/material";
+import { TextField } from "@mui/material";
 import { IoMdClose } from "react-icons/io";
 import "./SignInModal.css";
+import { loginUser } from "@/services/auth";
+import { useAuthStore } from "@/stores/StoreUser";
 
 interface SignInModalProps {
   open: boolean;
@@ -13,6 +15,8 @@ export default function SignInModal({
   handleClose,
   onSwitchToSignUp,
 }: SignInModalProps) {
+  const { login, user } = useAuthStore();
+  console.log(user);
   if (!open) return null;
 
   return (
@@ -38,13 +42,30 @@ export default function SignInModal({
         >
           Bienvenue sur Harmonya
         </h2>
-        <form className="modal-form">
+        <form
+          className="modal-form"
+          onSubmit={(e: any) => {
+            e.preventDefault();
+
+            const email = e.target.email.value;
+            const password = e.target.password.value;
+
+            loginUser({ email, password }).then((res) => {
+              console.log(res.data);
+              handleClose();
+              login(res.data.user, res.data.token);
+            });
+
+            console.log(email, password);
+          }}
+        >
           <TextField
             label="Email"
             variant="outlined"
             fullWidth
             margin="normal"
             type="email"
+            name="email"
           />
           <TextField
             label="Mot de passe"
@@ -52,6 +73,7 @@ export default function SignInModal({
             fullWidth
             margin="normal"
             type="password"
+            name="password"
           />
           <button
             type="submit"
