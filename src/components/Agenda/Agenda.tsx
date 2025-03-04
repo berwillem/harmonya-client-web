@@ -34,6 +34,14 @@ const Agenda: React.FC = () => {
 
   return (
     <div className="agenda-container">
+      <div className="select">
+        <select name="" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
       <div className="agenda-table">
         <button
           className="agenda-navigate agenda-navigate-left"
