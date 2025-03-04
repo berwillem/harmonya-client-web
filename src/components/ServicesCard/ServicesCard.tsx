@@ -1,19 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import "./ServicesCard.css";
 import { useNavigate } from "react-router-dom";
-interface ServicesCardProps {
-  imageSrc: string;
-  title: string;
-  description: string;
-  tags: string[];
-}
+import { SliderCardType } from "@/utils/types";
 
 export default function ServicesCard({
   imageSrc,
   title,
   description,
   tags,
-}: ServicesCardProps) {
+}: SliderCardType) {
   const [isOpen, setIsOpen] = useState(false);
   const formRef = useRef(null);
   const navigate = useNavigate();
@@ -35,7 +30,7 @@ export default function ServicesCard({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
-
+  console.log("tags:", tags);
   return (
     <div
       className="card"
@@ -51,9 +46,9 @@ export default function ServicesCard({
         <h3 className="card-title">{title}</h3>
         <p className="card-description">{description}</p>
         <div className="tags-container">
-          {tags.map((tag, index) => (
+          {tags?.map((tag, index) => (
             <span key={index} className="tag">
-              {tag}
+              {tag.title}
             </span>
           ))}
         </div>
