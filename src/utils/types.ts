@@ -3,4 +3,5 @@ export interface SliderCardType {
   title: string;
   description: string;
   tags: { id: string; title: string }[];
+  data: any
 }

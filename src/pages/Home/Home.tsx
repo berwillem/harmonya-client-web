@@ -43,6 +43,7 @@ export default function Home() {
               title: service.title,
               description: service.description,
               tags: service.subcategories,
+              data: service
             };
           }
         );

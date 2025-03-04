@@ -8,6 +8,7 @@ export default function ServicesCard({
   title,
   description,
   tags,
+  data
 }: SliderCardType) {
   const [isOpen, setIsOpen] = useState(false);
   const formRef = useRef(null);
@@ -30,13 +31,13 @@ export default function ServicesCard({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
-  console.log("tags:", tags);
+  console.log("tags:", data);
   return (
     <div
       className="card"
       onClick={() =>
         // navigate to service id page
-        navigate("/service")
+        navigate(`/service/${data.id}`)
       }
     >
       <div className="image-container">

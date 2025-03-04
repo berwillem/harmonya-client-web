@@ -123,6 +123,7 @@ export default function ServiceSlider({ isServiceDetails, data }) {
               title={service.title}
               description={service.description}
               tags={service.tags}
+              data={service.data}
             />
           </SwiperSlide>
         ))}

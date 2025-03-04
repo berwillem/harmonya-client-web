@@ -4,7 +4,9 @@ import localisation from "../../assets/localisation.png";
 import img1 from "../../assets/service3.png";
 import img2 from "../../assets/service2.png";
 import img3 from "../../assets/service.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getServicesById } from "@/services/servics";
 
 const fakeService = {
   title: "Coiffure Homme",
@@ -22,9 +24,23 @@ const fakeService = {
     Vendredi: "Fermé",
     Samedi: "Fermé",
   },
-};
+}
+
 
 export default function SeviceDetails() {
+  const { id } = useParams()
+  const [service, setService] = useState({})
+  useEffect(() => {
+    getServicesById(id).then((res) => {
+      setService(res.data)
+
+    }).catch((err) => {
+      console.log(err);
+
+    })
+  }, [id])
+
+
   return (
     <section id="service-details">
       <div className="service-titles">
@@ -38,13 +54,13 @@ export default function SeviceDetails() {
         <div className="service-details">
           <div className="service-details-left">
             <img
-              src={fakeService.images[0]}
+              src={service.images?.Image[0].url}
               alt="Service Banner"
               className="img-service-banner"
             />
             <div className="service-details-imgs">
-              {fakeService.images.map((img, index) => (
-                <img key={index} src={img} alt={`Service ${index}`} />
+              {service.images?.Image.map((img, index) => (
+                <img key={index} src={img.url} alt={`Service ${index}`} />
               ))}
             </div>
             <div className="localisation-service">
@@ -60,12 +76,12 @@ export default function SeviceDetails() {
                 <p>
                   <strong>Description :</strong>
                 </p>
-                <p>{fakeService.description}</p>
+                <p>{service.description}</p>
                 <p>
                   <strong>Prix :</strong>
                 </p>
-                <p className="price">{fakeService.price}</p>
-                <Link to="/Reservation">
+                <p className="price">{service.price}</p>
+                <Link to={`/Reservation/${service.ownerId}/${service.id}`}>
                   <button>Réservez votre place</button>
                 </Link>
 
