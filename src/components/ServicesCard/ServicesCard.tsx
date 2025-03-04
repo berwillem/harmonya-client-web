@@ -1,22 +1,18 @@
 import { useEffect, useRef, useState } from "react";
-import "./ServicesCard.css"
-interface ServicesCardProps {
-  imageSrc: string;
-  title: string;
-  description: string;
-  tags: string[];
-
-}
+import "./ServicesCard.css";
+import { useNavigate } from "react-router-dom";
+import { SliderCardType } from "@/utils/types";
 
 export default function ServicesCard({
   imageSrc,
   title,
   description,
   tags,
-}: ServicesCardProps) {
+  data
+}: SliderCardType) {
   const [isOpen, setIsOpen] = useState(false);
   const formRef = useRef(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -35,23 +31,27 @@ export default function ServicesCard({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
-
+  console.log("tags:", data);
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() =>
+        // navigate to service id page
+        navigate(`/service/${data.id}`)
+      }
+    >
       <div className="image-container">
         <img src={imageSrc} alt={title} className="card-image" />
-
       </div>
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
         <p className="card-description">{description}</p>
         <div className="tags-container">
-          {tags.map((tag, index) => (
+          {tags?.map((tag, index) => (
             <span key={index} className="tag">
-              {tag}
+              {tag.title}
             </span>
           ))}
-
         </div>
       </div>
     </div>

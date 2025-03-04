@@ -1,0 +1,57 @@
+.agenda-block {
+  background-color: #f7f7f7;
+  color: #000;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.agenda-block:hover {
+  background-color: #eef0f2;
+}
+
+.selected {
+  background-color: black;
+  color: white;
+}
+.selected:hover {
+  background-color: black;
+  color: white;
+}
+.block-loading {
+  background-color: #f7f7f7;
+  color: #c9c9c9;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: progress;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  animation: loading 0.5s infinite;
+}
+.unavailable {
+  color: #c9c9c9 !important;
+  cursor: not-allowed;
+}
+
+.unavailable:hover {
+  background-color: #f7f7f7;
+  color: #c9c9c9;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #f7f7f7;
+  }
+  50% {
+    background-color: #eef0f2;
+  }
+  100% {
+    background-color: #f7f7f7;
+  }
+}

@@ -1,6 +1,6 @@
 #slider-home {
   height: 600px;
-  margin: 5vw;
+  margin: 4vw 5vw;
 }
 .title-home {
   margin: 0vh 5vw;
@@ -26,6 +26,9 @@
 }
 .title-platfrom p {
   font-size: 24px;
+}
+#stats-section {
+  margin: 5vh 0 0 0;
 }
 @media screen and (max-width: 1240px) {
 }

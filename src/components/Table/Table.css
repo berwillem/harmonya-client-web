@@ -1,0 +1,35 @@
+.table-container {
+  width: 100%;
+  overflow-x: scroll;
+  user-select: none;
+  scrollbar-width: none;
+}
+
+.table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-overflow: ellipsis;
+  min-width: 180px;
+}
+
+.table th {
+  text-align: left;
+  border-bottom: 2px solid #e7e7e7;
+}
+tbody td:last-child,
+thead th:last-child {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
